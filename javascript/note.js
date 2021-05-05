@@ -51,3 +51,61 @@ function introduce(name, age, nationality = '한국') {
 introduce('코드잇', 4, '미국')
 console.log('')
 introduce('코드잇', 4)
+
+// 객체와 프로퍼티
+// Property Name : Property value
+// propertyName은 암묵적으로 string 취급
+// example
+let codit = {
+  name: '코드잇',
+  'born Year' : 2017,
+  isVeryNice : true,
+  worstCourse : null,
+  bestCourse : {
+    title : '자바스크립트 프로그래밍 기초',
+    language : 'JavaScript'
+  }
+}
+
+console.log(codeit.name)              // OK
+console.log(codit['born year'])       // OK
+console.log(codeit['born ' + 'year']) // OK
+let propertyName = 'name'             
+console.log(codeit[propertyName])     //OK
+console.log(codeit.teacher)           // undefined
+
+codeit.teacher = '강영훈'
+console.log(codeit.teacher)           // OK
+
+codeit.name = 'codeit'
+delete codeit.worstCourse
+
+console.log('name' in codeit)         // OK
+
+// for...in
+for (let key in codeit) {
+  console.log(key)
+  console.log(codeit[key])
+}
+
+// method
+let greetings = {
+  sayHello : function() {
+    console.log('Hello!')
+  },
+  sayHi : function(name) {
+    console.log('Hi! ' + name)
+  },
+  sayBye: function() {
+    console.log('Bye!')
+  } 
+}
+
+greetings.sayHi('Codeit')
+greetings['sayHi']('Codeit')
+
+
+// array
+// spllice(startIndex, deleteCount, items)
+// shift(), pop(), unshift(value), push(value)
+// for...of
