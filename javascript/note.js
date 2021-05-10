@@ -33,6 +33,7 @@ console.log('생년월일은 ' + year + '년 ' + month +'월 ' + day + '일 입�
 console.log(`생년월일은 ${year}년 ${month}월 ${day}일 입니다.`)
 
 // 템플릿 example2
+
 let myNumber = 3
 
 function getTwice(x) {
@@ -64,6 +65,16 @@ let codit = {
   bestCourse : {
     title : '자바스크립트 프로그래밍 기초',
     language : 'JavaScript'
+  }
+}
+
+let objectName = {
+  propertyName : propertyValue,
+  name : 'example',
+  language : 'javascript',
+  '1special' : {
+    number : 0,
+    string : 'abc'
   }
 }
 
